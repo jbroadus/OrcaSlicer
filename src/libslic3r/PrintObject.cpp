@@ -31,9 +31,9 @@
 #include "TreeSupport.hpp"
 
 #include <float.h>
-#include <oneapi/tbb/blocked_range.h>
-#include <oneapi/tbb/concurrent_vector.h>
-#include <oneapi/tbb/parallel_for.h>
+#include <tbb/blocked_range.h>
+#include <tbb/concurrent_vector.h>
+#include <tbb/parallel_for.h>
 #include <string_view>
 #include <utility>
 
