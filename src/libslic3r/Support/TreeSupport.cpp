@@ -143,7 +143,7 @@ static std::vector<std::pair<TreeSupportSettings, std::vector<size_t>>> group_me
 #endif // NDEBUG
         // Support must be enabled and set to Tree style.
         assert(object_config.enable_support || object_config.enforce_support_layers > 0);
-        assert(object_config.support_style == smsTree || object_config.support_style == smsOrganic);
+        assert(object_config.support_style == smsTreeSlim || object_config.support_style == smsTreeStrong || object_config.support_style == smsTreeHybrid || object_config.support_style == smsOrganic);
 
         bool found_existing_group = false;
         TreeSupportSettings next_settings{ TreeSupportMeshGroupSettings{ print_object }, print_object.slicing_parameters() };
