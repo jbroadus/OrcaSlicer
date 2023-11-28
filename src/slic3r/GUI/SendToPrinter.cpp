@@ -1268,7 +1268,7 @@ void SendToPrinterDialog::set_default()
         if (filename.empty()) filename = _L("Untitled");
     }
 
-    fs::path filename_path(filename.c_str());
+    fs::path filename_path(filename.utf8_string());
     m_current_project_name = wxString::FromUTF8(filename_path.filename().string());
 
     //unsupported character filter
