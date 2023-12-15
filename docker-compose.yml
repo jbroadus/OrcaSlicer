@@ -1,0 +1,13 @@
+version: 3.8
+
+services:
+  builder:
+    image: orcaslicer/builder
+    build:
+      context: .
+    volumes:
+      - ./:/orcaslicer:z
+    entrypoint: /bin/bash
+    working_dir: /orcaslicer
+    stdin_open: true
+    tty: true
