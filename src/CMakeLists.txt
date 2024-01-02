@@ -95,6 +95,13 @@ if (SLIC3R_GUI)
     # libslic3r_gui will link to opengl anyway, so lets override wx
     list(FILTER wxWidgets_LIBRARIES EXCLUDE REGEX OpenGL)
 
+    if (UNIX AND NOT APPLE)
+      if(NOT SLIC3R_STATIC)
+        # Needed for javascript functions.
+        list(APPEND wxWidgets_LIBRARIES webkit2gtk-4.1)
+      endif()
+    endif ()
+
 #    list(REMOVE_ITEM wxWidgets_LIBRARIES oleacc)
     message(STATUS "wx libs: ${wxWidgets_LIBRARIES}")
 
